@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var i = 0
+  
 
   var attributes = {
     STRONG: 'STRONG',
@@ -17,6 +17,10 @@ $(document).ready(function () {
     this.ingredients = {}
   }
 
+  Pantry.prototype.addIngredient = function(ingredient, attribute) {
+
+  }
+
   function Question (text, attribute) {
     this.text = text;
     this.attribute = attribute;
@@ -25,6 +29,9 @@ $(document).ready(function () {
   function Bartender (pantry, questionList) {
     this.pantry = pantry;
     this.questionList = questionList;
+  }
+  Bartender.prototype.makeDrink = function(attributes) {
+    console.log('first day problems')
   }
 
   // function Pantry() {
@@ -41,7 +48,7 @@ $(document).ready(function () {
     -Adding ingredients to pantry
     -
   */
-
+  var i = 0
   var q1 = new Question('Do ye like yer drinks strong?', ['glug of Rum', 'slug of Whiskey', 'Splash of Gin'])
   var q2 = new Question('Do ye like it with a salty tang?', ['Olive on a stick', 'salt dusted rim', 'rasher of bacon'])
   var q3 = new Question('Are ye a lubber who likes it bitter?', ['shake of bitters', 'splash of tonic', 'twist of lemon peel'])
